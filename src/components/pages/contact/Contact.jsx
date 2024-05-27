@@ -14,19 +14,28 @@ export default function Contact() {
     if(name === 'name'){
       if(value === ''){
         setFormData({...formData, [name]: ''});
-        setErrMsg('REQUIRED: Please Enter A Name.')
+        setErrMsg('REQUIRED: Please Enter a Name.')
       }
     }
+
     if(name === 'email'){
       if(value === ''){
         setFormData({...formData, [name]: ''});
-        setErrMsg('REQUIRED: Please Enter An Email Address.')
+        return setErrMsg('REQUIRED: Please Enter an Email Address.')
+      }
+      const validEmail = /^([a-z0-9_.-]+)@([\da-z.-]+).([a-z.]{2,6})$/;
+      console.log(!validEmail.test(value))
+      if(!validEmail.test(value)){
+        return setErrMsg('INVALID: Please Enter a Valid Email Address.')
+      }else{
+        setErrMsg('')
       }
     }
+
     if(name === 'msg'){
       if(value === ''){
         setFormData({...formData, [name]: ''});
-        setErrMsg('REQUIRED: Please Enter A Message.')
+        setErrMsg('REQUIRED: Please Enter a Message.')
       }
     }
     if(value.length > 0){
@@ -41,7 +50,7 @@ export default function Contact() {
         <label className='label' htmlFor="name">Name:</label>
         <input className='input' name="name" type="text" defaultValue={formData.name} placeholder='Enter Your Name' onBlur={validateForm}/>
         <label className='label' htmlFor="email">Email:</label>
-        <input className='input' name="email" type="text" defaultValue={formData.email} placeholder='Enter Your Email Address' onBlur={validateForm}/>
+        <input className='input' name="email" type="email" defaultValue={formData.email} placeholder='Enter Your Email Address' onBlur={validateForm}/>
         <label className='label' htmlFor="msg">Message:</label>
         <textarea className='input' name="msg" type="text" defaultValue={formData.msg} placeholder='Enter A Message' onBlur={validateForm}></textarea>
         <button id="submit">Submit</button>
