@@ -1,0 +1,19 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.self-image {
+  height: 500px;
+  width: 500px;
+  background-image: url(../../../assets/images/rvb_circle.png);
+  background-size: 500px;
+  border-radius: 50%;
+  box-shadow: 0 0 30px 30px #fff4ef inset;
+}
+
+.p-about{
+  text-align: center;
+}
