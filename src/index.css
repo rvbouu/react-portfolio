@@ -31,3 +31,8 @@ h1{
 p{
   font-size: 1.2rem;
 }
+
+input, textarea {
+  font-family: "Quattrocento Sans", sans-serif;
+  font-weight: 400;
+}

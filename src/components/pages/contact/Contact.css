@@ -9,8 +9,8 @@
 .form {
   display: flex;
   align-items: center;
-  justify-content: center;
-  height: 500px;
+  justify-content: flex-start;
+  height: 525px;
   width:800px;
   background-color: #eedaca;
   border-radius: 5%;
@@ -47,4 +47,11 @@
   width: 90%;
   background-color: #d6bda9;
   min-width: 100px;
+}
+
+.errMsg {
+  margin-top: 10px;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #b20000;
 }
