@@ -1,3 +1,7 @@
+.subtitle{
+  margin-bottom: 0;
+}
+
 .resumeBtn{
   display: flex;
   flex-direction: column;

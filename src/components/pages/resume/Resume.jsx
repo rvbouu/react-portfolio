@@ -10,7 +10,7 @@ export default function Resume() {
       <a href={resumeFile} download='RachanaVBou_Resume' target='_blank' rel='noreferrer' className='resumeBtn'>
         <button id='resumeBtn'>Click Here to Download My Resumé</button>
       </a>
-      <h2>Front-end Proficiences</h2>
+      <h2 className='subtitle'>Front-end Proficiences</h2>
       <ul className='listgrp'>
         <li className='list'>CSS</li>
         <li className='list'>JavaScript</li>
@@ -19,7 +19,7 @@ export default function Resume() {
         <li className='list'>React</li>
         <li className='list'>Bootstrap</li>
       </ul>
-      <h2>Back-end Proficiences</h2>
+      <h2 className='subtitle'>Back-end Proficiences</h2>
       <ul className='listgrp'>
         <li className='list'>APIs</li>
         <li className='list'>Node</li>
