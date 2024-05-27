@@ -52,7 +52,7 @@ export default function Contact() {
         <label className='label' htmlFor="email">Email:</label>
         <input className='input' name="email" type="email" defaultValue={formData.email} placeholder='Enter Your Email Address' onBlur={validateForm}/>
         <label className='label' htmlFor="msg">Message:</label>
-        <textarea className='input' name="msg" type="text" defaultValue={formData.msg} placeholder='Enter A Message' onBlur={validateForm}></textarea>
+        <textarea className='input' name="msg" id='msg' type="text" defaultValue={formData.msg} placeholder='Enter A Message' onBlur={validateForm}></textarea>
         <button id="submit">Submit</button>
         <div className='errMsg'>{errMsg}</div>
       </form>
