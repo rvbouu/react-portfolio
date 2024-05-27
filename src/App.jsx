@@ -1,12 +1,12 @@
 import { useState } from 'react'
 import './App.css'
-import Resume from './components/pages/resume/Resume'
+import Portfolio from './components/pages/portfolio/Portfolio'
 
 function App() {
 
   return (
     <>
-      <Resume />
+      <Portfolio />
     </>
   )
 }
