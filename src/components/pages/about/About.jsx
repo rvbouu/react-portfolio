@@ -1,5 +1,5 @@
 // imports
-import rvb from '../../../assets/images/rvb_circle.png';
+import rvb from '../../../assets/rvb_circle.png';
 import './About.css';
 
 export default function About() {

@@ -1,4 +1,4 @@
-import resumeFile from '../../../assets/files/rvb_Resume_2024.pdf';
+import resumeFile from '../../../assets/rvb_Resume_2024.pdf';
 import './Resume.css';
 
 export default function Resume() {
