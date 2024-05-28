@@ -5,7 +5,7 @@ export default function Portfolio() {
 
   return (
     <section className='portfolio'>
-      <h2>Portfolio</h2>
+      <h2 className='portfolio-title'>Portfolio</h2>
       <div className='projects'>
         {projects.map(project => (
           <div className='projectcard' key={project.id} style={{ backgroundImage: `url(${project.image})`, backgroundRepeat: 'no-repeat' }}>
