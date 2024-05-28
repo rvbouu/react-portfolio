@@ -5,16 +5,22 @@ export default function Portfolio() {
 
   return (
     <section className='portfolio'>
-      {projects.map(project => (
-        <div className='project' key={project.id} style={{ backgroundImage: `url(${project.image})`, backgroundRepeat: 'no-repeat' }}>
-          <a href={project.liveLink} target='_blank'>
-            <h1 className='title'>{project.title}</h1>
-          </a>
-          <a href={project.github} target='_blank'>
-            <img 
-          </a>
-        </div>
-      ))}
+      <h2>Portfolio</h2>
+      <div className='projects'>
+        {projects.map(project => (
+          <div className='projectcard' key={project.id} style={{ backgroundImage: `url(${project.image})`, backgroundRepeat: 'no-repeat' }}>
+            <div className='links'>
+              <a href={project.liveLink} target='_blank'>
+                <h3 className='title'>{project.title}</h3>
+              </a>
+              <a href={project.github} target='_blank'>
+                <img src='/social_imgs/github.png' alt='github logo' id='github-logo' />
+              </a>
+            </div>
+            <p className='desc' style={{ display: '' }}>{project.description}</p>
+          </div>
+        ))}
+      </div>
     </section>
   )
 }
