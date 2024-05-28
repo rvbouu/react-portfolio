@@ -1,13 +1,20 @@
 import { useState } from 'react'
+import Header from './components/header/Header'
+import Container from './components/Container'
+import Footer from './components/footer'
 import './App.css'
-import Portfolio from './components/pages/portfolio/Portfolio'
 
 function App() {
+  const [currentPage, setCurrentPage] = useState('About');
 
   return (
-    <>
-      <Portfolio />
-    </>
+    <div className="viewport">
+      <Header currentPage={currentPage} setCurrentPage={setCurrentPage} />
+
+      <Container currentPage={currentPage} setCurrentPage={setCurrentPage} />
+
+      <Footer />
+    </div>
   )
 }
 
