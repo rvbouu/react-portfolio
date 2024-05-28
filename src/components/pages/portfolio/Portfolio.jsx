@@ -17,7 +17,7 @@ export default function Portfolio() {
                 <img src='/social_imgs/github.png' alt='github logo' id='github-logo' />
               </a>
             </div>
-            <p className='desc' style={{ display: '' }}>{project.description}</p>
+            <p className='desc'>{project.description}</p>
           </div>
         ))}
       </div>
