@@ -1,0 +1,32 @@
+header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.reveal .vanessa{
+  position: relative;
+  font-size: 60px;
+  font-weight: 800;
+  text-align: center;
+}
+
+.reveal .reveal-bg{
+  position: absolute;
+  height: 100%;
+  width: 0%;
+  background: red;
+  right: 0;
+  animation: revealText 1200ms ease-out;
+}
+
+@keyframes revealText {
+  0%{
+    width: 100%;
+  }
+
+  100%{
+    width: 0;
+    right: 100%;
+  }
+}

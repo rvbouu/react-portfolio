@@ -3,18 +3,20 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  
 }
 
 .self-image {
   margin-top: 10px;
   height: 500px;
   width: 500px;
-  background-image: url(../../../assets/images/rvb_circle.png);
+  background-image: url(../../../assets/rvb_circle.png);
   background-size: 500px;
   border-radius: 50%;
-  box-shadow: 0 0 30px 30px #fff4ef inset;
+  box-shadow: 0 0 20px 30px #fff4ef inset;
 }
 
-.p-about{
+.p-about {
   text-align: center;
+  margin: 15px 30px;
 }
