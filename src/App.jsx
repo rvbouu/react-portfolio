@@ -9,13 +9,13 @@ function App() {
   // const [currentPage, setCurrentPage] = useState('About');
 
   return (
-    <>
+    <div className='viewport'>
             {/* <Header currentPage={currentPage} setCurrentPage={setCurrentPage} />
 
       <Container currentPage={currentPage} setCurrentPage={setCurrentPage} /> */}
       <Portfolio />
       <Footer />
-    </>
+    </div>
   )
 }
 

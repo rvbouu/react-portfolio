@@ -13,3 +13,7 @@
   height: 100px;
   width: 100px;
 }
+
+.logo:hover{
+  box-shadow: 0 0 20px 5px magenta;
+}
