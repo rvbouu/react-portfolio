@@ -6,28 +6,30 @@ export default function Resume() {
 
   return (
     <section className='resume'>
-      <h1>Resumé</h1>
+      <h2>Resumé</h2>
       <a href={resumeFile} download='RachanaVBou_Resume' target='_blank' rel='noreferrer' className='resumeBtn'>
         <button id='resumeBtn'>Click Here to Download My Resumé</button>
       </a>
-      <h2 className='subtitle'>Front-end Proficiences</h2>
-      <ul className='listgrp'>
-        <li className='list'>CSS</li>
-        <li className='list'>JavaScript</li>
-        <li className='list'>JQuery</li>
-        <li className='list'>Responsive Design</li>
-        <li className='list'>React</li>
-        <li className='list'>Bootstrap</li>
-      </ul>
-      <h2 className='subtitle'>Back-end Proficiences</h2>
-      <ul className='listgrp'>
-        <li className='list'>APIs</li>
-        <li className='list'>Node</li>
-        <li className='list'>Express</li>
-        <li className='list'>PostgreSQL, Sequelize</li>
-        <li className='list'>MongoDB, Mongoose</li>
-        <li className='list'>REST</li>
-      </ul>
+      <div className='prof'>
+        <ul className='listgrp'>
+          <h3 className='subtitle'>Front-end Proficiences</h3>
+          <li className='list'>CSS</li>
+          <li className='list'>JavaScript</li>
+          <li className='list'>JQuery</li>
+          <li className='list'>Responsive Design</li>
+          <li className='list'>React</li>
+          <li className='list'>Bootstrap</li>
+        </ul>
+        <ul className='listgrp'>
+          <h3 className='subtitle'>Back-end Proficiences</h3>
+          <li className='list'>APIs</li>
+          <li className='list'>Node</li>
+          <li className='list'>Express</li>
+          <li className='list'>PostgreSQL, Sequelize</li>
+          <li className='list'>MongoDB, Mongoose</li>
+          <li className='list'>REST</li>
+        </ul>
+      </div>
     </section>
   )
 }

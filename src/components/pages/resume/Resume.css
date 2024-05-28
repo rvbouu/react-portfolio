@@ -1,5 +1,14 @@
+.resume{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0;
+}
+
 .subtitle{
-  margin-bottom: 0;
+  margin-top: 40px;
+  margin-bottom: 20px;
 }
 
 .resumeBtn{
@@ -9,6 +18,7 @@
   align-items: center;
   text-decoration: none;
   width: 100%;
+  margin-top: 15px;
 }
 
 #resumeBtn{
@@ -20,11 +30,12 @@
   border: 1px solid #a59080;
 }
 
-.resume{
+.prof{
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-around;
   align-items: center;
+  width: 100%;
 }
 
 .listgrp{
@@ -32,7 +43,6 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  width: 20%;
   text-align: center;
 }
 
@@ -41,6 +51,7 @@
   list-style-type: '\2661';
   list-style-position: outside;
   font-size: 1.5rem;
+  margin: 10px;
   padding-left: 10px;
 }
 
