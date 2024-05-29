@@ -9,7 +9,6 @@ import Footer from './components/footer/Footer'
 import './App.css'
 
 function App() {
-  // const [currentPage, setCurrentPage] = useState('About');
 
   return (
     <div className='viewport'>
@@ -18,7 +17,6 @@ function App() {
         <Header />
         <Routes>
           <Route path='/' element={<About />} />
-          <Route path='/about' element={<About />} />
           <Route path='/portfolio' element={<Portfolio />} />
           <Route path='/contact' element={<Contact />} />
           <Route path='/resume' element={<Resume />} />

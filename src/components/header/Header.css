@@ -47,7 +47,7 @@ header {
   width: 0%;
   background: #d6bda9;
   right: 0;
-  animation: revealText 3100ms;
+  animation: revealText 3000ms;
   z-index: 1;
 }
 
