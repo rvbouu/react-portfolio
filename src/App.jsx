@@ -15,7 +15,7 @@ function App() {
     <div className='viewport'>
 
       <BrowserRouter basename='/'>
-      <Header />
+        <Header />
         <Routes>
           <Route path='/' element={<About />} />
           <Route path='/about' element={<About />} />
@@ -23,7 +23,7 @@ function App() {
           <Route path='/contact' element={<Contact />} />
           <Route path='/resume' element={<Resume />} />
         </Routes>
-      <Footer />
+        <Footer />
       </BrowserRouter>
 
     </div>
