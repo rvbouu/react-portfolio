@@ -4,7 +4,7 @@ import './Nav.css';
 export default function Nav() {
   return (
     <nav className='navbar'>
-      <NavLink to='/about' style={({ isActive }) => {
+      <NavLink to='/' style={({ isActive }) => {
         return isActive ? { textShadow: '0 0 5px magenta' } : {};
       }} className='navEl' >About</NavLink>
       <NavLink to='/portfolio' style={({ isActive }) => {

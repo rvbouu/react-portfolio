@@ -47,13 +47,18 @@ export default function Contact() {
     <section className='contact'>
       <h1>Contact Me</h1>
       <form className='form'>
+
         <label className='label' htmlFor="name">Name:</label>
         <input className='input' name="name" type="text" defaultValue={formData.name} placeholder='Enter Your Name' onBlur={validateForm}/>
+
         <label className='label' htmlFor="email">Email:</label>
         <input className='input' name="email" type="email" defaultValue={formData.email} placeholder='Enter Your Email Address' onBlur={validateForm}/>
+
         <label className='label' htmlFor="msg">Message:</label>
         <textarea className='input' name="msg" id='msg' type="text" defaultValue={formData.msg} placeholder='Enter A Message' onBlur={validateForm}></textarea>
+
         <button id="submit">Submit</button>
+        
         <div className='errMsg'>{errMsg}</div>
       </form>
     </section>

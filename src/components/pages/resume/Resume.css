@@ -32,6 +32,10 @@
   border: 1px solid #a59080;
 }
 
+#resumeBtn:hover {
+  border: 2px solid #684929;
+}
+
 .prof{
   display: flex;
   flex-direction: row;
