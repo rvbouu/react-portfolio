@@ -6,7 +6,7 @@ export default function Resume() {
 
   return (
     <section className='resume'>
-      <h2>Resumé</h2>
+      <h2 className='resume-title'>Resumé</h2>
       <a href={resumeFile} download='RachanaVBou_Resume' target='_blank' rel='noreferrer' className='resumeBtn'>
         <button id='resumeBtn'>Click Here to Download My Resumé</button>
       </a>

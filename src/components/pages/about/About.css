@@ -6,6 +6,12 @@
   min-height: calc(100vh - 18rem);
 }
 
+.about-title{
+  border-bottom: 2px dotted black;
+  width: 30%;
+  text-align: center;
+}
+
 .self-image {
   margin-top: 10px;
   height: 500px;

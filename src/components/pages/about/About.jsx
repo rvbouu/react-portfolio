@@ -6,7 +6,7 @@ export default function About() {
   return (
     <section className='about'>
       <span className='self-image'></span>
-      <h1>About Me</h1>
+      <h2 className='about-title'>About Me</h2>
       <p className='p-about'>Hi I'm Vanessa! I'm a full stack web developer with a background in Computer Science and content creation. I'm dedicated to life-long learning and am always ready to push boundaries in both my professional and personal life.</p>
       <p className='p-about'>I have a strong foundation in critical thinking and problem solving thanks to my background in Computer Science but as for content creation, this has allowed me to think about the little details that go into everything. From lighting being off in a picture to a hair being out of place on camera, my strong attention to detail is thanks to all those hours of sitting and editing content.</p>
       <p className='p-about'>Outside of the tech industry, which I guess I'm never really out of since I'm always thinking of ways to create content for social media, I'm an avid reader, adrenaline-seeker, and animal lover. From reading a great mystery-thriller to giving my dog Tank all the love and care that he deserves, the problem solving skills that I've gained through all these experiences have helped strength my skills in my professional life. I know you wouldn't think that reading, snowboarding, or taking care of an animal would have much to do with problem solving, but these experiences keep me on my toes with their different challenges, like trying to solve the mystery before the end of the book, figuring out how to stay up as I'm going down the hill, and Tank...all of his allergies, known and unknown, are a constant flow of unsolved, but slowly being solved, mysteries.</p>

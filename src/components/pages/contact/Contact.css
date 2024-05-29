@@ -10,6 +10,12 @@
   justify-content: center;
 }
 
+.contact-title{
+  border-bottom: 2px dotted black;
+  width: 30%;
+  text-align: center;
+}
+
 .form {
   margin-top: 50px;
   display: flex;

@@ -45,7 +45,7 @@ export default function Contact() {
 
   return (
     <section className='contact'>
-      <h1>Contact Me</h1>
+      <h2 className='contact-title'>Contact Me</h2>
       <form className='form'>
 
         <label className='label' htmlFor="name">Name:</label>
