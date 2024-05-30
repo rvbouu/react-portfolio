@@ -64,7 +64,7 @@ export default function Contact() {
   }
 
   // handles form submission for Netlify
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(e);
     const { name, value } = e.target;
@@ -106,61 +106,59 @@ export default function Contact() {
     }
 
     console.log(formData.name, formData.email, formData.msg)
-    fetch("/", {
+    const response = await fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({ "form-name": "contact", ...formData })
     })
-      .then(() => {
-        setSuccessMsg('Your form was submitted successfully.')
-        setFormData({ name: '', email: '', msg: '' })
-      })
-      .catch(error => {
-        setErrMsg('There was an error submitting your form')
-        console.log(error)
-      });
+    if(response.ok){
+      setSuccessMsg('Your form was submitted successfully.')
+      setFormData({ name: '', email: '', msg: '' })
+    }else{
+    setErrMsg('There was an error submitting your form')
   };
+};
 
-  return (
-    <section className='contact'>
-      <h2 className='contact-title'>Contact Me</h2>
+return (
+  <section className='contact'>
+    <h2 className='contact-title'>Contact Me</h2>
 
-      {/* Testing submission handling through netlify */}
-      {/* onBlur used for when user clicks out of field and leaves it empty, the errMsg will display */}
-      <form className='form' onSubmit={handleSubmit} >
+    {/* Testing submission handling through netlify */}
+    {/* onBlur used for when user clicks out of field and leaves it empty, the errMsg will display */}
+    <form className='form' onSubmit={handleSubmit} >
 
-        {/* Name input field */}
-        <label className='label' htmlFor="name">Name:</label>
-        <input className='input' name="name" type="text" defaultValue={formData.name} placeholder='Enter Your Name' onBlur={validateForm} required />
+      {/* Name input field */}
+      <label className='label' htmlFor="name">Name:</label>
+      <input className='input' name="name" type="text" defaultValue={formData.name} placeholder='Enter Your Name' onBlur={validateForm} required />
 
-        {/* Email input field */}
-        <label className='label' htmlFor="email">Email:</label>
-        <input className='input' name="email" type="email" defaultValue={formData.email} placeholder='Enter Your Email Address' onBlur={validateForm} required />
+      {/* Email input field */}
+      <label className='label' htmlFor="email">Email:</label>
+      <input className='input' name="email" type="email" defaultValue={formData.email} placeholder='Enter Your Email Address' onBlur={validateForm} required />
 
-        {/* Message input field */}
-        <label className='label' htmlFor="msg">Message:</label>
-        <textarea className='input' name="msg" id='msg' type="text" defaultValue={formData.msg} placeholder='Enter A Message' onBlur={validateForm} required></textarea>
+      {/* Message input field */}
+      <label className='label' htmlFor="msg">Message:</label>
+      <textarea className='input' name="msg" id='msg' type="text" defaultValue={formData.msg} placeholder='Enter A Message' onBlur={validateForm} required></textarea>
 
-        <button id="submit" type='submit' onClick={handleSubmit} >Submit</button>
+      <button id="submit" type='submit' onClick={handleSubmit} >Submit</button>
 
-        {/* errMsg and successMsg */}
-        <div className='successMsg'>{successMsg}</div>
-        <div className='errMsg'>{errMsg}</div>
-      </form>
+      {/* errMsg and successMsg */}
+      <div className='successMsg'>{successMsg}</div>
+      <div className='errMsg'>{errMsg}</div>
+    </form>
 
-      {/* Popup for contact icon to display direct contact info */}
-      <Popup
-        trigger={
-          <img src='/social_imgs/contact_img.png' alt='contact logo' className='popover' />
-        }
-        position="top center"
-      >
-        <div className='popover-content'>
-          <h4 className='contact-pop'>If you'd like to contact me directly:</h4>
-          <p>Email: rvbouu@gmail.com</p>
-          <p>Phone: please email if you would like to set up a phone call</p>
-        </div>
-      </Popup>
-    </section>
-  )
+    {/* Popup for contact icon to display direct contact info */}
+    <Popup
+      trigger={
+        <img src='/social_imgs/contact_img.png' alt='contact logo' className='popover' />
+      }
+      position="top center"
+    >
+      <div className='popover-content'>
+        <h4 className='contact-pop'>If you'd like to contact me directly:</h4>
+        <p>Email: rvbouu@gmail.com</p>
+        <p>Phone: please email if you would like to set up a phone call</p>
+      </div>
+    </Popup>
+  </section>
+)
 }
