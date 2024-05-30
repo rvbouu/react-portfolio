@@ -6,24 +6,24 @@ import './Contact.css';
 // exports
 export default function Contact() {
 
-  const handleSubmit = e => {
+  
+  // allows form to be manipulated
+  const [formData, setFormData] = useState({ name: '', email: '', msg: '' })
+  
+  // allows errMsg to get rendered
+  const [errMsg, setErrMsg] = useState('');
+  
+  const handleSubmit = (e) => {
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", ...this.state })
+      body: encode({ "form-name": "contact", ...formData })
     })
       .then(() => alert("Success!"))
       .catch(error => alert(error));
 
     e.preventDefault();
   };
-
-  // allows form to be manipulated
-  const [formData, setFormData] = useState({ name: '', email: '', msg: '' })
-
-  // allows errMsg to get rendered
-  const [errMsg, setErrMsg] = useState('');
-
   // checks form inputs: if form field is left empty, displays an errMsg to the user
   const validateForm = (e) => {
     console.log(e);
