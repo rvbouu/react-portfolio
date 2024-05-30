@@ -5,6 +5,19 @@ import './Contact.css';
 
 // exports
 export default function Contact() {
+
+  const handleSubmit = e => {
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "contact", ...this.state })
+    })
+      .then(() => alert("Success!"))
+      .catch(error => alert(error));
+
+    e.preventDefault();
+  };
+
   // allows form to be manipulated
   const [formData, setFormData] = useState({ name: '', email: '', msg: '' })
 
@@ -58,7 +71,7 @@ export default function Contact() {
 
       {/* Testing submission handling through netlify */}
       {/* onBlur used for when user clicks out of field and leaves it empty, the errMsg will display */}
-      <form className='form' netlify >
+      <form className='form' onSubmit={handleSubmit} >
 
         {/* Name input field */}
         <label className='label' htmlFor="name">Name:</label>
