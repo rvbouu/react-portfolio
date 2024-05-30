@@ -17,7 +17,8 @@ header {
   margin: 10px;
 }
 
-/* ---------- Header animation ---------- */
+/* ---------- Header animations ---------- */
+/* ---------- logo animation ---------- */
 .animate {
   position: relative;
   width: 375px;
@@ -31,6 +32,7 @@ header {
   display: relative;
 }
 
+/* ---------- animation for full name ---------- */
 .reveal {
   position: absolute;
   margin-left: 100px;
@@ -66,14 +68,12 @@ header {
 }
 
 /* ---------- Media Queries ---------- */
-/* 1024x768 */
 @media screen and (max-width: 1024px) {
   .reveal .vanessa {
     font-size: 50px;
   }
 }
 
-/* 962x601 */
 @media screen and (max-width: 962px) {
   header {
     flex-direction: column;
