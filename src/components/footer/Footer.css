@@ -1,3 +1,4 @@
+/* ---------- Footer styling ---------- */
 .footer {
   width: 100%;
   background-color: #d6bda9;
@@ -20,6 +21,7 @@
   box-shadow: 0 0 20px 5px magenta;
 }
 
+/* ---------- Media Queries ---------- */
 @media screen and (max-width: 800px) {
   .logo{
     height: 50px;
