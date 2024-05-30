@@ -23,6 +23,7 @@
 /* ---------- Popover for contact info ---------- */
 
 .popover{
+  margin-top: 50px;
   width: 60px;
   height: 60px;
   cursor: pointer;
@@ -47,6 +48,7 @@
 }
 
 .contact-pop{
+  font-size: 1.2rem;
   padding-bottom: 5px;
   margin-bottom: 5px;
   border-bottom: 2px dotted black;
@@ -56,7 +58,7 @@
   color: rgb(255, 255, 255);
 }
 [role='tooltip'].popup-content {
-  width: 25%;
+  width: 50%;
   box-shadow: #4c4947 0px 0px 3px 3px;
 }
 
@@ -140,4 +142,10 @@
 .contact-title{
   width: 60%;
 }
+}
+
+@media screen and (max-width:962px) {
+  [role='tooltip'].popup-content {
+    width:80%;
+  }
 }

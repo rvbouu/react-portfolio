@@ -46,18 +46,7 @@ export default function Contact() {
 
   return (
     <section className='contact'>
-      <h2 className='contact-title'>Contact Me<Popup
-        trigger={
-          <img src='/social_imgs/contact_img.png' alt='contact logo' className='popover' />
-        }
-        position="right center"
-      >
-        <div className='popover-content'>
-          <h4 className='contact-pop'>If you'd like to contact me directly:</h4>
-          <p>Email: rvbouu@gmail.com</p>
-          <p>Phone: (425)879-3150</p>
-        </div>
-      </Popup> </h2>
+      <h2 className='contact-title'>Contact Me</h2>
       <form className='form' >
 
         <label className='label' htmlFor="name">Name:</label>
@@ -73,6 +62,18 @@ export default function Contact() {
 
         <div className='errMsg'>{errMsg}</div>
       </form>
+      <Popup
+        trigger={
+          <img src='/social_imgs/contact_img.png' alt='contact logo' className='popover' />
+        }
+        position="top center"
+      >
+        <div className='popover-content'>
+          <h4 className='contact-pop'>If you'd like to contact me directly:</h4>
+          <p>Email: rvbouu@gmail.com</p>
+          <p>Phone: (425)879-3150</p>
+        </div>
+      </Popup>
     </section>
   )
 }
