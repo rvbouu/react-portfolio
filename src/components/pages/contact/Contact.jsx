@@ -58,7 +58,7 @@ export default function Contact() {
         <label className='label' htmlFor="msg">Message:</label>
         <textarea className='input' name="msg" id='msg' type="text" defaultValue={formData.msg} placeholder='Enter A Message' onBlur={validateForm} required></textarea>
 
-        <button id="submit">Submit</button>
+        <button id="submit" type='submit' >Submit</button>
 
         <div className='errMsg'>{errMsg}</div>
       </form>
