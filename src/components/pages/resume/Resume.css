@@ -38,10 +38,7 @@
   border: 1px solid #a59080;
 }
 
-#resumeBtn:hover {
-  border: 2px solid #684929;
-}
-
+/* ---------- Proficiencies ---------- */
 .prof{
   display: flex;
   flex-direction: row;
@@ -58,6 +55,7 @@
   text-align: center;
 }
 
+/* styling for list */
 .list{
   text-align: center;
   list-style-type: '\2661';
@@ -67,6 +65,55 @@
   padding-left: 10px;
 }
 
+/* bullet point size */
 .list::marker{
   font-size: .8rem;
+}
+
+/* ---------- Hovers ---------- */
+#resumeBtn:hover {
+  border: 2px solid #684929;
+}
+
+/* ---------- Media Queries ---------- */
+
+@media screen and (max-width: 1366px) {
+  .subtitle{
+    width: 100%;
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .subtitle{
+    width: 100%;
+    font-size: 1.5rem;
+  }
+  
+  .list{
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 962px) {
+  .resume-title, .resumeBtn{
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .resumeBtn{
+    margin-bottom: 30px;
+  }
+
+
+  .prof{
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .resumeBtn{
+    width: 80%
+  }
 }
