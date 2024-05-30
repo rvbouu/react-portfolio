@@ -112,7 +112,6 @@ export default function Contact() {
       body: encode({ "form-name": "contact", ...formData })
     })
       .then(() => {
-        console.log(response)
         setSuccessMsg('Your form was submitted successfully.')
         setFormData({ name: '', email: '', msg: '' })
       })
