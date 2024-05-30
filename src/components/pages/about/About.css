@@ -8,7 +8,7 @@
   min-height: calc(100vh - 18rem);
 }
 
-.about-title{
+.about-title {
   border-bottom: 2px dotted black;
   width: 30%;
   text-align: center;
@@ -32,13 +32,13 @@
 /* ---------- Media Queries ---------- */
 
 @media screen and (max-width: 962px) {
-  .about-title{
+  .about-title {
     width: 60%;
   }
 }
 
 @media screen and (max-width: 480px) {
-  .self-image{
+  .self-image {
     height: 450px;
     width: 450px;
   }

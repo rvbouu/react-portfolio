@@ -1,5 +1,5 @@
 // exports
-export default function Project({project}){
+export default function Project({ project }) {
   return (
     // one project card template that sets project img as background
     <div className='projectcard' style={{ backgroundImage: `url(${project.image})`, backgroundRepeat: 'no-repeat' }}>

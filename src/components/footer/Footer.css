@@ -12,18 +12,18 @@
   height: 10rem;
 }
 
-.logo{
+.logo {
   height: 100px;
   width: 100px;
 }
 
-.logo:hover{
+.logo:hover {
   box-shadow: 0 0 20px 5px magenta;
 }
 
 /* ---------- Media Queries ---------- */
 @media screen and (max-width: 800px) {
-  .logo{
+  .logo {
     height: 50px;
     width: 50px;
   }

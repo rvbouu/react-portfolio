@@ -1,5 +1,5 @@
 /* ---------- Resume Page Styling ---------- */
-.resume{
+.resume {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -7,20 +7,20 @@
   min-height: calc(100vh - 18rem);
 }
 
-.resume-title{
+.resume-title {
   border-bottom: 2px dotted black;
   width: 30%;
   text-align: center;
 }
 
-.subtitle{
+.subtitle {
   margin-top: 40px;
   margin-bottom: 20px;
   border-bottom: 2px dotted black;
   width: 110%;
 }
 
-.resumeBtn{
+.resumeBtn {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -30,7 +30,7 @@
   margin: 30px 0 100px 0;
 }
 
-#resumeBtn{
+#resumeBtn {
   font-size: 1.2rem;
   height: 40px;
   width: 100%;
@@ -40,7 +40,7 @@
 }
 
 /* ---------- Proficiencies ---------- */
-.prof{
+.prof {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -48,7 +48,7 @@
   width: 60%;
 }
 
-.listgrp{
+.listgrp {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -57,7 +57,7 @@
 }
 
 /* styling for list */
-.list{
+.list {
   text-align: center;
   list-style-type: '\2661';
   list-style-position: outside;
@@ -67,7 +67,7 @@
 }
 
 /* bullet point size */
-.list::marker{
+.list::marker {
   font-size: .8rem;
 }
 
@@ -79,42 +79,44 @@
 /* ---------- Media Queries ---------- */
 
 @media screen and (max-width: 1366px) {
-  .subtitle{
+  .subtitle {
     width: 100%;
     font-size: 2rem;
   }
 }
 
 @media screen and (max-width: 1024px) {
-  .subtitle{
+  .subtitle {
     width: 100%;
     font-size: 1.5rem;
   }
-  
-  .list{
+
+  .list {
     font-size: 1.2rem;
   }
 }
 
 @media screen and (max-width: 962px) {
-  .resume-title, .resumeBtn{
+
+  .resume-title,
+  .resumeBtn {
     width: 60%;
   }
 }
 
 @media screen and (max-width: 800px) {
-  .resumeBtn{
+  .resumeBtn {
     margin-bottom: 30px;
   }
 
 
-  .prof{
+  .prof {
     flex-direction: column;
   }
 }
 
 @media screen and (max-width: 480px) {
-  .resumeBtn{
+  .resumeBtn {
     width: 80%
   }
 }

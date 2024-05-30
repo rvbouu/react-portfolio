@@ -1,6 +1,6 @@
 /* ---------- Contact Page ---------- */
 
-.contact{
+.contact {
   min-height: calc(100vh - 18rem);
 }
 
@@ -12,17 +12,17 @@
   justify-content: center;
 }
 
-.contact-title{
+.contact-title {
   border-bottom: 2px dotted black;
   width: 30%;
   text-align: center;
-  vertical-align:middle;
+  vertical-align: middle;
 }
 
 
 /* ---------- Popover for contact info ---------- */
 
-.popover{
+.popover {
   margin-top: 50px;
   width: 60px;
   height: 60px;
@@ -30,10 +30,10 @@
   border: 1px solid #68492900;
 }
 
-.popover:hover{
+.popover:hover {
   border: 1px solid #684929;
   box-shadow: 0 0 10px 5px #684929,
-  inset 0 0 10px 5px #684929;
+    inset 0 0 10px 5px #684929;
 }
 
 .popup-content {
@@ -47,7 +47,7 @@
   padding: 5px;
 }
 
-.contact-pop{
+.contact-pop {
   font-size: 1.2rem;
   padding-bottom: 5px;
   margin-bottom: 5px;
@@ -57,6 +57,7 @@
 .popup-arrow {
   color: rgb(255, 255, 255);
 }
+
 [role='tooltip'].popup-content {
   width: 50%;
   box-shadow: #4c4947 0px 0px 3px 3px;
@@ -65,6 +66,7 @@
 .popup-overlay {
   background: #4c4947;
 }
+
 [data-popup='tooltip'].popup-overlay {
   background: transparent;
 }
@@ -76,7 +78,7 @@
   align-items: center;
   justify-content: flex-start;
   height: 525px;
-  width:800px;
+  width: 800px;
   background-color: #eedaca;
   border-radius: 5%;
   box-shadow: 0 0 20px 0 #4c4947;
@@ -122,31 +124,32 @@
 
 /* ---------- focus styling for contact form ---------- */
 
-.input:focus, #msg:focus{
+.input:focus,
+#msg:focus {
   box-shadow: 0 0 3px 3px #91f3b8;
 }
 
 /* ---------- Hovers ---------- */
 
-#submit:hover{
+#submit:hover {
   border: 2px solid #684929;
 }
 
 /* ---------- Media Queries ---------- */
 
 @media screen and (max-width:962px) {
-.form{
-  height: 500px;
-  width: 416px;
-}
+  .form {
+    height: 500px;
+    width: 416px;
+  }
 
-.contact-title{
-  width: 60%;
-}
+  .contact-title {
+    width: 60%;
+  }
 }
 
 @media screen and (max-width:962px) {
   [role='tooltip'].popup-content {
-    width:80%;
+    width: 80%;
   }
 }
