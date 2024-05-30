@@ -31,7 +31,7 @@ export default function Contact() {
       body: encode({ "form-name": "contact", ...formData })
     })
       .then(() => setSuccessMsg('Your form was submitted successfully.'))
-      setFormData(formData)
+      setFormData({name: '', email: '', msg: ''})
       .catch(error => setErrMsg('There was an error submitting your form'));
   };
   // checks form inputs: if form field is left empty, displays an errMsg to the user
