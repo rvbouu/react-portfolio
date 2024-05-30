@@ -31,7 +31,6 @@ export default function Contact() {
       body: encode({ "form-name": "contact", ...formData })
     })
       .then(() => setSuccessMsg('Your form was submitted successfully.'))
-      setFormData({name: '', email: '', msg: ''})
       .catch(error => setErrMsg('There was an error submitting your form'));
   };
   // checks form inputs: if form field is left empty, displays an errMsg to the user
@@ -95,7 +94,7 @@ export default function Contact() {
         <label className='label' htmlFor="msg">Message:</label>
         <textarea className='input' name="msg" id='msg' type="text" defaultValue={formData.msg} placeholder='Enter A Message' onBlur={validateForm} required></textarea>
 
-        <button id="submit" type='submit' >Submit</button>
+        <button id="submit" type='submit' onClick={setFormData({name: '', email: '', msg: ''})} >Submit</button>
 
         {/* errMsg and successMsg */}
         <div className='successMsg'>{successMsg}</div>
