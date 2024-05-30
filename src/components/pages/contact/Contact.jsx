@@ -7,11 +7,7 @@ import './Contact.css';
 export default function Contact() {
 
   // needed function for Netlify form submission
-  const encode = (data) => {
-    return Object.keys(data)
-      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-      .join("&");
-  }
+
 
   // allows form to be manipulated
   const [formData, setFormData] = useState({ name: '', email: '', msg: '' })
@@ -66,13 +62,58 @@ export default function Contact() {
   // handles form submission for Netlify
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log(e);
+    const { name, value } = e.target;
+    console.log(name, value);
+    setFormData({ ...formData, [name]: value });
+
+    if (name === 'name') {
+      if (value === '') {
+        setFormData({ ...formData, [name]: '' });
+        setErrMsg('REQUIRED: Please Enter a Name.')
+      }
+    }
+
+    if (name === 'email') {
+      if (value === '') {
+        setFormData({ ...formData, [name]: '' });
+        return setErrMsg('REQUIRED: Please Enter an Email Address.')
+      }
+
+      // checks for a valid email
+      const validEmail = /^([a-z0-9_.-]+)@([\da-z.-]+).([a-z.]{2,6})$/;
+      console.log(!validEmail.test(value))
+      if (!validEmail.test(value)) {
+        return setErrMsg('INVALID: Please Enter a Valid Email Address.')
+      } else {
+        setErrMsg('')
+      }
+    }
+
+    if (name === 'msg') {
+      if (value === '') {
+        setFormData({ ...formData, [name]: '' });
+        setErrMsg('REQUIRED: Please Enter a Message.')
+      }
+      return;
+    }
+    if (value.length > 0) {
+      setErrMsg('');
+    }
+
+    const encode = (data) => {
+      return Object.keys(data)
+        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+        .join("&");
+    }
+
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({ "form-name": "contact", ...formData })
     })
       .then(() => {
-        validateForm(e)
+        console.log(response)
         setSuccessMsg('Your form was submitted successfully.')
         setFormData({ name: '', email: '', msg: '' })
       })
