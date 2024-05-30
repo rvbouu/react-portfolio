@@ -3,6 +3,12 @@ import { useState } from 'react';
 import Popup from 'reactjs-popup'; // popup library for contact icon
 import './Contact.css';
 
+const encode = (data) => {
+  return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&");
+}
+
 // exports
 export default function Contact() {
 
