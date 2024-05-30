@@ -1,3 +1,4 @@
+/* ---------- Navbar styling ---------- */
 .navbar{
   display: flex;
   flex-direction: row;
@@ -12,11 +13,12 @@
   color: black;
 }
 
+/* ---------- Hovers ---------- */
 .navEl:hover{
   text-shadow: 0 0 5px magenta;
 }
 
-/* 800x360 */
+/* ---------- Media Queries ---------- */
 @media screen and (max-width: 800px) {
   .navbar{
     width: 100%;
