@@ -116,7 +116,10 @@ export default function Contact() {
         setSuccessMsg('Your form was submitted successfully.')
         setFormData({ name: '', email: '', msg: '' })
       })
-      .catch(error => setErrMsg('There was an error submitting your form'));
+      .catch(error => {
+        setErrMsg('There was an error submitting your form')
+        console.log(error)
+      });
   };
 
   return (
