@@ -1,6 +1,3 @@
-
-
-
 export default function Project({project}){
   return (
     <div className='projectcard' style={{ backgroundImage: `url(${project.image})`, backgroundRepeat: 'no-repeat' }}>

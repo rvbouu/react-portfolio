@@ -5,7 +5,7 @@ import './Header.css'
 
 export default function Header() {
   return (
-    <header className='header'>
+    <header>
       <Link to='/' className='header-logo'>
         <div className='animate__animated animate__slideInRight animate__slower animate'>
           <img src='/rvb_logo.PNG' alt='personal logo' id='rvb-logo' />
