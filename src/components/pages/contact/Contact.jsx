@@ -47,7 +47,7 @@ export default function Contact() {
   return (
     <section className='contact'>
       <h2 className='contact-title'>Contact Me</h2>
-      <form className='form' >
+      <form className='form' netlify >
 
         <label className='label' htmlFor="name">Name:</label>
         <input className='input' name="name" type="text" defaultValue={formData.name} placeholder='Enter Your Name' onBlur={validateForm} required />
@@ -71,7 +71,7 @@ export default function Contact() {
         <div className='popover-content'>
           <h4 className='contact-pop'>If you'd like to contact me directly:</h4>
           <p>Email: rvbouu@gmail.com</p>
-          <p>Phone: (425)879-3150</p>
+          <p>Phone: please email if you would like to set up a phone call</p>
         </div>
       </Popup>
     </section>
