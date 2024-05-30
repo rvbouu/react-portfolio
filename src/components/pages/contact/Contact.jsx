@@ -24,6 +24,7 @@ export default function Contact() {
   
   // handles form submission for Netlify
   const handleSubmit = (e) => {
+    e.preventDefault();
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -31,8 +32,6 @@ export default function Contact() {
     })
       .then(() => setSuccessMsg('Your form was submitted successfully.'))
       .catch(error => setErrMsg('There was an error submitting your form'));
-
-    e.preventDefault();
   };
   // checks form inputs: if form field is left empty, displays an errMsg to the user
   const validateForm = (e) => {
