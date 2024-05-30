@@ -1,15 +1,18 @@
-import resumeFile from '../../../assets/rvb_Resume_2024.pdf';
+// imports
+import resumeFile from '../../../assets/rvb_Resume_2024.pdf'; // resume pdf file
 import './Resume.css';
 
+// exports
 export default function Resume() {
-
-
   return (
     <section className='resume'>
       <h2 className='resume-title'>Resumé</h2>
+      {/* link/button to download resume pdf */}
       <a href={resumeFile} download='RachanaVBou_Resume' target='_blank' rel='noreferrer' className='resumeBtn'>
         <button id='resumeBtn'>Click Here to Download My Resumé</button>
       </a>
+
+      {/* proficiences lists */}
       <div className='prof'>
         <ul className='listgrp'>
           <h3 className='subtitle'>Front-end Proficiences</h3>
