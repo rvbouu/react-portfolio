@@ -7,7 +7,11 @@ import './Contact.css';
 export default function Contact() {
 
   // needed function for Netlify form submission
-
+  const encode = (data) => {
+    return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&");
+  }
 
   // allows form to be manipulated
   const [formData, setFormData] = useState({ name: '', email: '', msg: '' })
@@ -101,12 +105,7 @@ export default function Contact() {
       setErrMsg('');
     }
 
-    const encode = (data) => {
-      return Object.keys(data)
-        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-        .join("&");
-    }
-
+    console.log(formData.name, formData.email, formData.msg)
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
