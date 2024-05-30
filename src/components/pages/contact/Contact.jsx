@@ -5,6 +5,8 @@ import './Contact.css';
 
 // exports
 export default function Contact() {
+
+  // needed function for Netlify form submission
   const encode = (data) => {
     return Object.keys(data)
         .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
@@ -17,14 +19,18 @@ export default function Contact() {
   // allows errMsg to get rendered
   const [errMsg, setErrMsg] = useState('');
   
+  // allows errMsg to get rendered
+  const [successMsg, setSuccessMsg] = useState('');
+  
+  // handles form submission for Netlify
   const handleSubmit = (e) => {
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({ "form-name": "contact", ...formData })
     })
-      .then(() => alert("Success!"))
-      .catch(error => alert(error));
+      .then(() => setSuccessMsg('Your form was submitted successfully.'))
+      .catch(error => setErrMsg('There was an error submitting your form'));
 
     e.preventDefault();
   };
@@ -91,7 +97,8 @@ export default function Contact() {
 
         <button id="submit" type='submit' >Submit</button>
 
-        {/* errMsg */}
+        {/* errMsg and successMsg */}
+        <div className='successMsg'>{successMsg}</div>
         <div className='errMsg'>{errMsg}</div>
       </form>
 

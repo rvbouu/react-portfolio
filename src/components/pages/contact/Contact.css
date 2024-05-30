@@ -122,6 +122,13 @@
   color: #b20000;
 }
 
+.successMsg {
+  margin-top: 10px;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #2dce00;
+}
+
 /* ---------- focus styling for contact form ---------- */
 
 .input:focus,
