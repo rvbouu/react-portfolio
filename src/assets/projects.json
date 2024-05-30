@@ -1,6 +1,5 @@
 [
   {
-    "id": 1,
     "title": "TekTok",
     "description": "A social media site for people interested in tech to come together.",
     "image": "/project_imgs/tektok.png",
@@ -8,7 +7,6 @@
     "github": "https://github.com/rvbouu/tektok"
   },
   {
-    "id": 2,
     "title": "Note Taker",
     "description": "A note taker application made with Express.",
     "image": "/project_imgs/notetaker.png",
@@ -16,7 +14,6 @@
     "github": "https://github.com/rvbouu/note-taker"
   },
   {
-    "id": 3,
     "title": "Hoop Stats",
     "description": "An all-in-one place for NBA fans to keep up with the league and their favorite teams.",
     "image": "/project_imgs/hoopstats.png",
@@ -24,7 +21,6 @@
     "github": "https://github.com/rvbouu/hoop-stats"
   },
   {
-    "id": 4,
     "title": "Kanban Task Board",
     "description": "A kanban board to help manage all your tasks.",
     "image": "/project_imgs/taskboard.png",
@@ -32,7 +28,6 @@
     "github": "https://github.com/rvbouu/task-board"
   },
   {
-    "id": 5,
     "title": "Personal Blog",
     "description": "A blog site where users can post and view blogs.",
     "image": "/project_imgs/blog.png",
@@ -40,7 +35,6 @@
     "github": "https://github.com/rvbouu/personal-blog"
   },
   {
-    "id": 6,
     "title": "My First Website",
     "description": "The start of my web development journey! The first website I ever designed and deployed to the internet.",
     "image": "/project_imgs/firstweb.png",

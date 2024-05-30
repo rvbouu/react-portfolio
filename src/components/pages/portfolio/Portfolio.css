@@ -1,3 +1,5 @@
+/* ---------- Portfolio Page Styling ---------- */
+
 .portfolio {
   display: flex;
   flex-direction: column;
@@ -22,9 +24,9 @@
 }
 
 .projectcard {
-  height: 400px;
-  width: 650px;
-  margin: 50px;
+  height: 320px;
+  width: 520px;
+  margin: 20px;
   background-size: cover;
   border: 1px solid #a59080;
   box-shadow: 0 0 15px 5px #a59080;
@@ -67,6 +69,7 @@
   background-color: #eedacada;
 }
 
+/* ---------- Hovers ---------- */
 .projectcard:hover {
   .desc {
     display: block;
@@ -83,4 +86,27 @@
 
 #github-logo:hover {
   box-shadow: 0 0 10px 1px magenta;
+}
+
+/* ---------- Media Queries ---------- */
+@media screen and (max-width: 1024px) {
+.projectcard{
+  height: 240px;
+  width: 390px;
+}
+
+.title{
+  font-size: 2rem;
+}
+
+#github-logo{
+  width: 40px;
+  height: 40px;
+}
+}
+
+@media screen and (max-width: 800px) {
+  .portfolio-title {
+    width: 60%;
+  }
 }
