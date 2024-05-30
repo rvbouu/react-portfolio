@@ -9,72 +9,83 @@ export default function Contact() {
   // needed function for Netlify form submission
   const encode = (data) => {
     return Object.keys(data)
-        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-        .join("&");
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&");
   }
-  
+
   // allows form to be manipulated
   const [formData, setFormData] = useState({ name: '', email: '', msg: '' })
-  
+
   // allows errMsg to get rendered
   const [errMsg, setErrMsg] = useState('');
-  
+
   // allows errMsg to get rendered
   const [successMsg, setSuccessMsg] = useState('');
-  
+
   // handles form submission for Netlify
-  const handleSubmit = (e) => {
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   fetch("/", {
+  //     method: "POST",
+  //     headers: { "Content-Type": "application/x-www-form-urlencoded" },
+  //     body: encode({ "form-name": "contact", ...formData })
+  //   })
+  //     .then(() => {
+  //       setSuccessMsg('Your form was submitted successfully.')
+  //       setFormData({ name: '', email: '', msg: '' })
+  //     })
+  //     .catch(error => setErrMsg('There was an error submitting your form'));
+  // };
+  // checks form inputs: if form field is left empty, displays an errMsg to the user
+  const validateForm = (e) => {
     e.preventDefault();
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({ "form-name": "contact", ...formData })
+    }).then(() => {
+      console.log(e);
+      const { name, value } = e.target;
+      console.log(name, value);
+      setFormData({ ...formData, [name]: value });
+
+      if (name === 'name') {
+        if (value === '') {
+          setFormData({ ...formData, [name]: '' });
+          setErrMsg('REQUIRED: Please Enter a Name.')
+        }
+      }
+
+      if (name === 'email') {
+        if (value === '') {
+          setFormData({ ...formData, [name]: '' });
+          return setErrMsg('REQUIRED: Please Enter an Email Address.')
+        }
+
+        // checks for a valid email
+        const validEmail = /^([a-z0-9_.-]+)@([\da-z.-]+).([a-z.]{2,6})$/;
+        console.log(!validEmail.test(value))
+        if (!validEmail.test(value)) {
+          return setErrMsg('INVALID: Please Enter a Valid Email Address.')
+        } else {
+          setErrMsg('')
+        }
+      }
+
+      if (name === 'msg') {
+        if (value === '') {
+          setFormData({ ...formData, [name]: '' });
+          setErrMsg('REQUIRED: Please Enter a Message.')
+        }
+      }
+      if (value.length > 0) {
+        setErrMsg('');
+      }
+
+      setSuccessMsg('Your form was submitted successfully.')
+      setFormData({ name: '', email: '', msg: '' })
     })
-      .then(() => {
-        setSuccessMsg('Your form was submitted successfully.')
-        setFormData({name: '', email: '', msg: ''})
-      })
       .catch(error => setErrMsg('There was an error submitting your form'));
-  };
-  // checks form inputs: if form field is left empty, displays an errMsg to the user
-  const validateForm = (e) => {
-    console.log(e);
-    const { name, value } = e.target;
-    console.log(name, value);
-    setFormData({ ...formData, [name]: value });
-
-    if (name === 'name') {
-      if (value === '') {
-        setFormData({ ...formData, [name]: '' });
-        setErrMsg('REQUIRED: Please Enter a Name.')
-      }
-    }
-
-    if (name === 'email') {
-      if (value === '') {
-        setFormData({ ...formData, [name]: '' });
-        return setErrMsg('REQUIRED: Please Enter an Email Address.')
-      }
-
-      // checks for a valid email
-      const validEmail = /^([a-z0-9_.-]+)@([\da-z.-]+).([a-z.]{2,6})$/;
-      console.log(!validEmail.test(value))
-      if (!validEmail.test(value)) {
-        return setErrMsg('INVALID: Please Enter a Valid Email Address.')
-      } else {
-        setErrMsg('')
-      }
-    }
-
-    if (name === 'msg') {
-      if (value === '') {
-        setFormData({ ...formData, [name]: '' });
-        setErrMsg('REQUIRED: Please Enter a Message.')
-      }
-    }
-    if (value.length > 0) {
-      setErrMsg('');
-    }
   }
 
   return (
@@ -83,7 +94,7 @@ export default function Contact() {
 
       {/* Testing submission handling through netlify */}
       {/* onBlur used for when user clicks out of field and leaves it empty, the errMsg will display */}
-      <form className='form' onSubmit={handleSubmit} >
+      <form className='form' onSubmit={validateForm} >
 
         {/* Name input field */}
         <label className='label' htmlFor="name">Name:</label>
@@ -97,7 +108,7 @@ export default function Contact() {
         <label className='label' htmlFor="msg">Message:</label>
         <textarea className='input' name="msg" id='msg' type="text" defaultValue={formData.msg} placeholder='Enter A Message' onBlur={validateForm} required></textarea>
 
-        <button id="submit" type='submit'onClick={handleSubmit} >Submit</button>
+        <button id="submit" type='submit' onClick={validateForm} >Submit</button>
 
         {/* errMsg and successMsg */}
         <div className='successMsg'>{successMsg}</div>
