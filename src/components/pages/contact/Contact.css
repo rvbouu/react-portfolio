@@ -1,3 +1,5 @@
+/* ---------- Contact Page ---------- */
+
 .contact{
   min-height: calc(100vh - 18rem);
 }
@@ -16,6 +18,9 @@
   text-align: center;
   vertical-align:middle;
 }
+
+
+/* ---------- Popover for contact info ---------- */
 
 .popover{
   width: 60px;
@@ -89,11 +94,12 @@
   border-color: #d6bda9;
 }
 
+/* ---------- focus styling for contact form ---------- */
+
 .input:focus, #msg:focus{
   box-shadow: 0 0 3px 3px #91f3b8;
 }
 
-/* makes content input box bigger */
 #msg {
   height: 100px;
   margin-bottom: 20px;
@@ -101,7 +107,6 @@
   box-shadow: 1px 1px 0 0 black inset;
 }
 
-/* submit button styling */
 #submit {
   font-size: 1.2rem;
   height: 30px;
@@ -111,13 +116,28 @@
   border: 1px solid #a59080;
 }
 
-#submit:hover{
-  border: 2px solid #684929;
-}
-
 .errMsg {
   margin-top: 10px;
   font-weight: 600;
   font-size: 1.2rem;
   color: #b20000;
+}
+
+/* ---------- Hovers ---------- */
+
+#submit:hover{
+  border: 2px solid #684929;
+}
+
+/* ---------- Media Queries ---------- */
+
+@media screen and (max-width:962px) {
+.form{
+  height: 500px;
+  width: 416px;
+}
+
+.contact-title{
+  width: 60%;
+}
 }
