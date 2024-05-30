@@ -69,6 +69,7 @@
   background: transparent;
 }
 
+/* ---------- form styling ---------- */
 .form {
   margin-top: 50px;
   display: flex;
@@ -96,12 +97,6 @@
   border-color: #d6bda9;
 }
 
-/* ---------- focus styling for contact form ---------- */
-
-.input:focus, #msg:focus{
-  box-shadow: 0 0 3px 3px #91f3b8;
-}
-
 #msg {
   height: 100px;
   margin-bottom: 20px;
@@ -123,6 +118,12 @@
   font-weight: 600;
   font-size: 1.2rem;
   color: #b20000;
+}
+
+/* ---------- focus styling for contact form ---------- */
+
+.input:focus, #msg:focus{
+  box-shadow: 0 0 3px 3px #91f3b8;
 }
 
 /* ---------- Hovers ---------- */
