@@ -1,6 +1,6 @@
+// imports
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Header from './components/header/Header'
-// import Container from './components/Container'
 import About from './components/pages/about/About'
 import Portfolio from './components/pages/portfolio/Portfolio'
 import Contact from './components/pages/contact/Contact'
@@ -8,11 +8,11 @@ import Resume from './components/pages/resume/Resume'
 import Footer from './components/footer/Footer'
 import './App.css'
 
-function App() {
-
+// exports
+export default function App() {
   return (
     <div className='viewport'>
-
+      {/* setting up routing for pages/components */}
       <BrowserRouter basename='/'>
         <Header />
         <Routes>
@@ -29,5 +29,3 @@ function App() {
 
   )
 }
-
-export default App;
