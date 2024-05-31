@@ -14,7 +14,7 @@ export default function Contact() {
   // allows errMsg to get rendered
   const [successMsg, setSuccessMsg] = useState('');
 
-  // checks form inputs: if form field is left empty, displays an errMsg to the user
+  // validates whether form has been filled or not
   const [errors, setErrors] = useState({})
   const validate = (formData) => {
     let formErrors = {};
@@ -24,7 +24,7 @@ export default function Contact() {
     if (!formData.email) {
       formErrors.email = 'Email required';
     }
-
+    // checks that email is valid
     if (formData.email) {
       const validEmail = /^([a-z0-9_.-]+)@([\da-z.-]+).([a-z.]{2,6})$/;
       console.log(!validEmail.test(formData.email))
@@ -35,12 +35,12 @@ export default function Contact() {
 
     if (!formData.msg) {
       formErrors.msg = 'Message required'
-      setErrMsg('REQUIRED: Please Enter a Message.')
     }
 
     return formErrors;
   }
 
+    // checks form inputs: if form field is left empty, displays an errMsg to the user
   const validateForm = (e) => {
     console.log(e);
     const {name, value} = e.target;
@@ -87,9 +87,8 @@ export default function Contact() {
     }
   }
 
-
+  // handles form submission
   const [isSubmitted, setIsSubmitted] = useState(false)
-
   const handleSubmit = e => {
     e.preventDefault();
     setErrors(validate(formData));
@@ -104,6 +103,7 @@ export default function Contact() {
       .join("&");
   }
 
+  // sends form input to Netlify and Netlify does back end part of saving responses
   useEffect(() => {
     if (Object.keys(errors).length === 0 && isSubmitted) {
       fetch("/", {
@@ -126,7 +126,7 @@ export default function Contact() {
     <section className='contact'>
       <h2 className='contact-title'>Contact Me</h2>
 
-      {/* Testing submission handling through netlify */}
+      {/* Submission handling through netlify */}
       {/* onBlur used for when user clicks out of field and leaves it empty, the errMsg will display */}
       <form className='form' onSubmit={handleSubmit} >
 
