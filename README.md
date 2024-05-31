@@ -6,7 +6,7 @@
 
 This portfolio application was developed and designed to showcase my projects, resume, and skills to potential employers, clients, and others interested in seeing my work. It was created using React, an open sourced JavaScript library for building user interfaces. It operates via a one page application, but gives the user experience of multiple page functionality.
 
-As of right now, this application is all front-end, but I will be looking into adding a backend framework so that the contact form on the Contact page can be functional.
+As of right now, this application is all front-end, but I was able to get the contact form to be functional through [Netlify's](https://www.netlify.com/) form submission handler.
 
 Some of the challenges that I faced while creating this application can be found [here in the Challenges section](#challenges).
 
@@ -69,9 +69,6 @@ Some of the challenges that I faced while creating this application can be found
 * #### Getting the animation in the header to work how I imaged
   - At first, I was trying to find a way that I could do one animation that would do everything, but soon realized that it wasn't possible (at my current skill level). Then, I broke up the animation I wanted into pieces. By implementing the [Animate.css](https://animate.style/) library as well as some keyframing in my custom stylesheet, I was able to acheive the look that I wanted!
 
-* #### Getting images for each project card to display at all
-  - This one and the next were tough ones. At first, I thought simply adding the project images to a folder in my src folder then adding the pathing to my .json file would work but it ended up throwing errors. Then I tried uploading the images to Google Drive and using the shared link from each as their path would work, but I ran into third-party blocking errors. Another route that I went down was trying to upload the images to my GitHub profile to get a link from there, but in my research I found that GitHub has taken away that ability (or made it so hidden that not many can use it now). When I was about to give up and hard code all the images in since they wouldn't appear when I tried dynamically rendering them, I moved the project_imgs folder to the public folder, changed the pathing to be similar to path you would see in Handlebars.js, then behold! My images finally appeared and were rendering dynamically.
-
 * #### Getting the active page to stay highlighted in the navigation bar
   - With the requirements that we were given for this assignment, I researched ways to style the Link hooks when a component is active. All documentation that I read told me that Link hooks no longer had styling ability for active components and to use NavLink, which I was hesitant at first since our README had state to use Link. I tried implementing NavLink instead of Link, using the activeStyle, activestyle, and active attributes but nothing had worked and would throw errors. As I continued reading the documentations for NavLink, I found that activeStyle (the main attribute that seemed to be used for this particular type of styling) is no longer being used by React Router and that there were a lot of changes from React Router v5 and v6, which I wasn't aware of at first. But in the end, after reading many documentations, I found that to apply this styling, you set a style attribute, and write a function for isActive that will return the styling you want to be applied to the active component.
   ```
@@ -79,6 +76,9 @@ Some of the challenges that I faced while creating this application can be found
         return isActive ? { <css property>: 'value' } : {};
       }} className='navEl' >Enter Text Here</NavLink>
   ```
+
+* #### Getting form submissions to work through [Netlify](https://www.netlify.com/)
+  - This was definitely the toughest of all the challenges I ran into. Originally, I wasn't going to have a functioning contact form yet since it wasn't part of the requirements and I hadn't learned how to set up React and back end development just yet, but when I deployed my site on [Netlify](https://www.netlify.com/), I saw that they had form submission handling through their website and I thought to myself, "Well if they're already doing half of the work, I might as well try to get it working!" I started off by just adding the `netlify` attribute to my form tag, that didn't work. Researched some more and found that I had to build a hidden form in my index.html, so I added that and everything seemed to be working, until I realized my form wasn't handling errors properly. So with more research and many hours of testing, I can across this article from the [Dev Community](https://dev.to/gamil91/function-component-react-form-submission-on-netlify-gab) and implemented it into my own code. Once implementing these tips, I finally got the form submission through [Netlify](https://www.netlify.com/)!
 
 ## Usage and Screenshots
 
@@ -110,7 +110,7 @@ This application is very user intuitive, just visit the [site](https://vanessa-b
 
 * Potential to add additional pages for showcasing photos, travel blog, social media content, and book list
 
-* Add backend and middleware so users can contact me (Express/MySQL, or GraphQL/MongoDB)
+* Add my own backend and middleware so users can contact me (Express/PostgreSQL, or GraphQL/MongoDB)
 
 * Add addition of useEffect
 
