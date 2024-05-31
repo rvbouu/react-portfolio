@@ -50,22 +50,26 @@ export default function Contact() {
     if (name === 'name') {
       if (value === '') {
         setFormData({ ...formData, [name]: '' });
-        setErrMsg('REQUIRED: Please Enter a Name.')
+        setSuccessMsg('');
+        setErrMsg('REQUIRED: Please Enter a Name.');
       }
     }
 
     if (name === 'email') {
       if (value === '') {
         setFormData({ ...formData, [name]: '' });
-        return setErrMsg('REQUIRED: Please Enter an Email Address.')
+        setSuccessMsg('');
+        return setErrMsg('REQUIRED: Please Enter an Email Address.');
       }
 
       // checks for a valid email
       const validEmail = /^([a-z0-9_.-]+)@([\da-z.-]+).([a-z.]{2,6})$/;
       console.log(!validEmail.test(value))
       if (!validEmail.test(value)) {
+        setSuccessMsg('')
         return setErrMsg('INVALID: Please Enter a Valid Email Address.')
       } else {
+        setSuccessMsg('')
         setErrMsg('')
       }
     }
@@ -73,10 +77,12 @@ export default function Contact() {
     if (name === 'msg') {
       if (value === '') {
         setFormData({ ...formData, [name]: '' });
+        setSuccessMsg('')
         setErrMsg('REQUIRED: Please Enter a Message.')
       }
     }
     if (value.length > 0) {
+      setSuccessMsg('')
       setErrMsg('');
     }
   }
@@ -88,6 +94,7 @@ export default function Contact() {
     e.preventDefault();
     setErrors(validate(formData));
     setIsSubmitted(true);
+    e.target.reset();
   }
 
   // needed function for Netlify form submission
@@ -106,7 +113,7 @@ export default function Contact() {
       })
         .then(() => setSuccessMsg('Your form was submitted successfully.'))
         .then(() => setIsSubmitted(false))
-        .then(() => setFormData({ name: '', email: '', msg: '' }))
+        .then(() => setFormData({ name: "", email: "", msg: "" }))
         .catch(error => {
           setErrMsg('There was an error submitting your form.')
           console.log(error)
