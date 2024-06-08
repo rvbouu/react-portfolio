@@ -110,3 +110,18 @@
     width: 60%;
   }
 }
+
+@media screen and (max-width: 400px) {
+  .portfolio-title {
+    width: 100%;
+  }
+
+  .projectcard {
+    height: 160px;
+    width: 260px;
+  }
+
+  .title {
+    font-size: 1.2rem;
+  }
+}

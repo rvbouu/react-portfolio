@@ -83,3 +83,23 @@ header {
     height: 60px;
   }
 }
+
+@media screen and (max-width: 400px) {
+  header {
+    height: 15rem;
+
+  }
+
+  #rvb-logo {
+    height: 60px;
+  }
+
+  .reveal .vanessa {
+    font-size: 30px;
+  }
+
+  .animate {
+    width: 280px;
+  }
+
+}

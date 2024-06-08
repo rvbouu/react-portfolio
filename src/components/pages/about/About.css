@@ -43,3 +43,16 @@
     width: 450px;
   }
 }
+
+@media screen and (max-width: 400px) {
+  .self-image {
+    height: 280px;
+    width: 280px;
+    background-position: center;
+    background-size: contain;
+  }
+
+  .about-title{
+    width: 100%;
+  }
+}

@@ -29,3 +29,15 @@
     margin-bottom: 10px;
   }
 }
+
+@media screen and (max-width: 400px) {
+  .navbar {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .navEl {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+}

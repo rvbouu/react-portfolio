@@ -148,20 +148,6 @@ export default function Contact() {
         <div className='successMsg'>{successMsg}</div>
         <div className='errMsg'>{errMsg}</div>
       </form>
-
-      {/* Popup for contact icon to display direct contact info */}
-      <Popup
-        trigger={
-          <img src='/social_imgs/contact_img.png' alt='contact logo' className='popover' />
-        }
-        position="top center"
-      >
-        <div className='popover-content'>
-          <h4 className='contact-pop'>If you'd like to contact me directly:</h4>
-          <p>Email: rvbouu@gmail.com</p>
-          <p>Phone: please email if you would like to set up a phone call</p>
-        </div>
-      </Popup>
     </section>
   )
 }
