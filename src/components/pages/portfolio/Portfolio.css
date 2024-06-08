@@ -109,6 +109,10 @@
   .portfolio-title {
     width: 60%;
   }
+
+  .desc {
+    font-size: .6rem;
+  }
 }
 
 @media screen and (max-width: 400px) {
