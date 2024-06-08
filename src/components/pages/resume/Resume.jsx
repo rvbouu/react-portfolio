@@ -9,7 +9,7 @@ export default function Resume() {
       <h2 className='resume-title'>Resumé</h2>
       {/* link/button to download resume pdf */}
       <a href={resumeFile} download='RachanaVBou_Resume' target='_blank' rel='noreferrer' className='resumeBtn'>
-        <button id='resumeBtn'>Click Here to Download My Resumé</button>
+        <button id='resumeBtn' type='submit'>Click Here to Download My Resumé</button>
       </a>
 
       {/* proficiences lists */}
