@@ -113,7 +113,9 @@
 
 @media screen and (max-width: 400px) {
   .portfolio-title {
+    margin-top: 30px;
     width: 100%;
+    font-size: 1.8rem;
   }
 
   .projectcard {

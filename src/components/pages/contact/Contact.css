@@ -111,7 +111,9 @@
   }
 
   .contact-title {
+    margin-top: 30px;
     width: 100%;
+    font-size: 1.8rem;
   }
 }
 
