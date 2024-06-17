@@ -52,7 +52,7 @@ p {
 a,
 button,
 input,
-textarea {
+textarea, p {
   font-family: "Quattrocento Sans", sans-serif;
   font-weight: 400;
 }

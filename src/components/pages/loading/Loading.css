@@ -1,0 +1,37 @@
+.loadingpage {
+  width: 100%;
+  height: 100vh;
+  background-image: url(/background.png);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.loading_circle {
+  height: 120%;
+  width: 85%;
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+.loading_circle {
+    animation: logo-spin infinite 45s linear;
+  }
+}
+
+.loading_title{
+  position: absolute;
+  font-size: 5rem;
+  text-shadow: 1px 0 8px white;
+}
