@@ -1,5 +1,12 @@
 [
   {
+    "title": "LinkTree",
+    "description": "A linktree for my social media accounts with all my links.",
+    "image": "/project_imgs/linktree.png",
+    "liveLink": "https://vanessa-linktree.netlify.app/",
+    "github": "https://github.com/rvbouu/linktree"
+  },
+  {
     "title": "TekTok",
     "description": "A social media site for people interested in tech to come together.",
     "image": "/project_imgs/tektok.png",
