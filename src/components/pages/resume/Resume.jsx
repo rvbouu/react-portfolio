@@ -1,5 +1,5 @@
 // imports
-import resumeFile from '../../../assets/rvb_Resume_2024.pdf'; // resume pdf file
+import resumeFile from '../../../assets/RachanaVBou_Resume_2024.pdf'; // resume pdf file
 import './Resume.css';
 
 // exports
